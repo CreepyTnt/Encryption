@@ -11,13 +11,17 @@ import encryption
 #Keys
 A new key is generated when you run the program however, you can load a key from a file like this:
 ```python
-encryption.load_key('path/to/file/')
+encryption.load_key_from_file('path/to/file/')
 ```
+
+You can also load a key as a string like this:
+``` python
+encryption.import_key(your_key)
+```
+
 You can also save keys like this:
 ```python
-encryption.save_key('directory/to/save') 
-#do not include the filename as it is added on to the path. Only put the directory path. 'C:\users\CreepyTnt\Desktop', not 'C:users\CreepyTnt\Desktop\file.txt'
-#DO NOT INCLUDE THE FILE NAME
+encryption.save_key('directory/to/save') # if you don't provide the file name, a file "key.txt" will be automatically created. If "key.txt" or the provided file already exists, it will be over-written
 ```
 
 #Encrypting data
